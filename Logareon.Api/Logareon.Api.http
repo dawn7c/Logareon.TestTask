@@ -1,0 +1,6 @@
+@Logareon.Api_HostAddress = http://localhost:5051
+
+GET {{Logareon.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
