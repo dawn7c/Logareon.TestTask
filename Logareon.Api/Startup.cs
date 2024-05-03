@@ -4,6 +4,10 @@ using static System.Net.Mime.MediaTypeNames;
 using System.Diagnostics;
 using Logareon.Domain.Repository;
 using Logareon.Domain.Models;
+using Logareon.Api.Controllers;
+using Logareon.Application.Services;
+using Logareon.Application.Abstractions;
+
 
 namespace Logareon.Api
 {
@@ -26,9 +30,10 @@ namespace Logareon.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Logareon_Service", Version = "1.0" });
             });
 
-            services.AddScoped(typeof(IReportBuilder), typeof(ReportBuilder));
-            services.AddScoped(typeof(IReporter), typeof(Reporter));
-            
+            services.AddTransient(typeof(IReportBuilder), typeof(ReportBuilder));
+            services.AddTransient(typeof(IReporter), typeof(Reporter));
+            services.AddSingleton<IRequestIdentifierService, RequestIdentifierService>();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

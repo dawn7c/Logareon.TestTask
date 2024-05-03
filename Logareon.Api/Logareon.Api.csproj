@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Logareon.Application\Logareon.Application.csproj" />
     <ProjectReference Include="..\Logareon.Domain\Logareon.Domain.csproj" />
   </ItemGroup>
 
