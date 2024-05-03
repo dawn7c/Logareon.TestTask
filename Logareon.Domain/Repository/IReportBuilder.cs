@@ -1,5 +1,4 @@
-﻿
-namespace Logareon.Domain.Repository
+﻿namespace Logareon.Domain.Repository
 {
     public interface IReportBuilder
     {

@@ -1,4 +1,3 @@
-
 namespace Logareon.Api
 {
     public class Program

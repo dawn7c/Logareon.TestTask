@@ -1,5 +1,4 @@
-﻿
-using Logareon.Domain.Repository;
+﻿using Logareon.Domain.Repository;
 
 namespace Logareon.Domain.Models
 {

@@ -1,13 +1,8 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.OpenApi.Models;
-using static System.Net.Mime.MediaTypeNames;
-using System.Diagnostics;
+﻿using Microsoft.OpenApi.Models;
 using Logareon.Domain.Repository;
 using Logareon.Domain.Models;
-using Logareon.Api.Controllers;
 using Logareon.Application.Services;
 using Logareon.Application.Abstractions;
-
 
 namespace Logareon.Api
 {
@@ -33,6 +28,7 @@ namespace Logareon.Api
             services.AddTransient(typeof(IReportBuilder), typeof(ReportBuilder));
             services.AddTransient(typeof(IReporter), typeof(Reporter));
             services.AddSingleton<IRequestIdentifierService, RequestIdentifierService>();
+            services.AddSingleton<IReportBuildingService,ReportBuildingService>();
 
         }
 

@@ -1,5 +1,4 @@
-﻿
-using Logareon.Domain.Repository;
+﻿using Logareon.Domain.Repository;
 using System.Text;
 
 namespace Logareon.Domain.Models
@@ -18,7 +17,7 @@ namespace Logareon.Domain.Models
                 for (int i = 0; i < secondsToWait; i++)
                 {
                     totalSeconds++;
-                    await Task.Delay(1000); // Подождать 1 секунду
+                    await Task.Delay(1000); 
                 }
 
                 if (random.Next(1, 6) == 1) // Вероятность 20%
