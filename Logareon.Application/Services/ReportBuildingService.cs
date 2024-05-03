@@ -56,7 +56,7 @@ namespace Logareon.Application.Services
             catch (Exception ex)
             {
                 _reporter.ReportError(requestId);
-                return -1; // Возвращаем отрицательное значение в случае ошибки
+                return -1; 
             }
         }
 

@@ -11,7 +11,7 @@ namespace Logareon.Domain.Models
             try
             {
                 string errorMessage = "Report error";
-                File.WriteAllText(fileName, errorMessage); // Запись текста в файл
+                File.WriteAllText(fileName, errorMessage); 
                 Console.WriteLine($"Error report successfully written to {fileName}");
             }
             catch (IOException e)
@@ -25,7 +25,7 @@ namespace Logareon.Domain.Models
             string fileName = $"Report_{Id}.txt";
             try
             {
-                File.WriteAllBytes(fileName, Data); // Запись массива байтов в файл
+                File.WriteAllBytes(fileName, Data); 
                 Console.WriteLine($"Report successfully written to {fileName}");
             }
             catch (IOException e)
@@ -40,7 +40,7 @@ namespace Logareon.Domain.Models
             try
             {
                 string timeoutMessage = "Report timeout";
-                File.WriteAllText(fileName, timeoutMessage); // Запись текста в файл
+                File.WriteAllText(fileName, timeoutMessage); 
                 Console.WriteLine($"Timeout report successfully written to {fileName}");
             }
             catch (IOException e)
